@@ -1,0 +1,18 @@
+javascript: var s;
+if (window.getSelection) {
+  s = window.getSelection();
+} else {
+  s = document.selection.createRange().text;
+}
+var t = prompt('Enter Firstname Lastname (no quotes)', s);
+t = t.trim();
+var q=t.split(' ');
+var x = prompt('Enter 2-letter state abbreviation', s);
+x = x.trim();
+if (q) {
+  setTimeout(function() {
+    window.open('https://thatsthem.com/name/' + q[0] + '-' + q[1] + '/' + x, 'new0', 'height=600,width=800,screenX=30, left=30,screenY=30,top=30,resizable=1,scrollbars=1,status=0,toolbar=1')
+  }, 40);
+} else {
+  void(s);
+}
